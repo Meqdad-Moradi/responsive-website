@@ -1,0 +1,331 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*::first-letter {
+  text-transform: uppercase;
+}
+
+body {
+  width: 100%;
+  line-height: 1.8;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  background-color: #F9FAFB;
+}
+
+input,
+button {
+  font-family: 'Poppins', sans-serif;
+}
+
+img {
+  display: block;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+p:not(:first-child) {
+  margin-top: 1em;
+}
+
+.main-title {
+  font-weight: 700;
+  font-size: 2.625rem;
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.main-title::after {
+  content: '';
+  height: 8px;
+  width: 110%;
+  background-color: #BFDBFE;
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-radius: 50px;
+  z-index: -1;
+}
+
+.title {
+  color: #1F2937;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.subtitle {
+  color: #4B5563;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.body-text {
+  color: #6B7280;
+  font-size: 1rem;
+}
+
+.details {
+  color: #9CA3AF;
+  font-size: 0.875rem;
+}
+
+.small {
+  color: #9CA3AF;
+  font-size: .75rem;
+}
+
+.btn {
+  text-transform: capitalize;
+  font-size: 1rem;
+  display: inline-block;
+  margin-top: 1.5em;
+  text-decoration: none;
+  background-color: #059669;
+  color: #fff;
+  padding: .5em 1em;
+  border-radius: 5px;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #10B981;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#header {
+  height: 70px;
+  -webkit-box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.5);
+}
+
+#header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: inherit;
+}
+
+#header .container a {
+  text-decoration: none;
+}
+
+#header .logo {
+  position: relative;
+  z-index: 1000;
+}
+
+#header .logo h1 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: #065F46;
+}
+
+#header .nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#header .nav-list li:not(:last-child) {
+  margin-right: 2.5em;
+}
+
+#header .nav-list a {
+  color: #1F2937;
+  position: relative;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#header .nav-list a.active {
+  color: #047857;
+}
+
+#header .nav-list a:hover {
+  color: #047857;
+}
+
+#header .toggler {
+  display: none;
+}
+
+#header .toggler span {
+  display: block;
+  height: 2px;
+  width: 20px;
+}
+
+#header .toggler span:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 760px) {
+  #header .header-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 100vw;
+    overflow: hidden;
+    background-color: #1F2937;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  #header .header-nav.active {
+    height: 100vh;
+    overflow: visible;
+  }
+  #header .nav-list {
+    height: inherit;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding-left: 10%;
+  }
+  #header .nav-list li {
+    margin: 0 !important;
+  }
+  #header .nav-list li:not(:last-child) {
+    margin-bottom: 1em !important;
+  }
+  #header .nav-list a {
+    color: #F9FAFB;
+    font-size: 1.125rem;
+    font-weight: 300;
+  }
+  #header .toggler {
+    display: block;
+    position: relative;
+    z-index: 1000;
+  }
+  #header .toggler span {
+    background-color: #1F2937;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    -webkit-transform-origin: 20px;
+            transform-origin: 20px;
+  }
+  #header .toggler.active span {
+    background-color: #F9FAFB;
+  }
+  #header .toggler.active span:first-child {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  #header .toggler.active span:nth-child(2) {
+    opacity: 0;
+  }
+  #header .toggler.active span:last-child {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+}
+
+#showcase {
+  height: calc(100vh - 70px);
+  position: relative;
+  overflow: hidden;
+}
+
+#showcase::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  inset: 0;
+  z-index: 9;
+}
+
+#showcase .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: inherit;
+}
+
+#showcase .container .content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  color: #F9FAFB;
+}
+
+#showcase .container .content h1 {
+  text-transform: capitalize;
+  font-size: 2.265rem;
+}
+
+#showcase .container .content .btn {
+  margin-top: 2.5em;
+}
+
+#showcase .slides {
+  position: absolute;
+  inset: 0;
+}
+
+#showcase .slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+#showcase .slide img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#showcase .slide.active {
+  opacity: 1;
+  pointer-events: all;
+}
+/*# sourceMappingURL=style.css.map */
