@@ -78,6 +78,7 @@
       overflow: hidden;
       background-color: $gray-800;
       transition: all 0.3s ease-in-out;
+      z-index: 100;
 
       &.active {
         height: 100vh;
@@ -177,6 +178,7 @@
   .slides {
     position: absolute;
     inset: 0;
+    z-index: 5;
   }
 
   .slide {

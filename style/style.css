@@ -197,6 +197,7 @@ p:not(:first-child) {
     background-color: #1F2937;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+    z-index: 100;
   }
   #header .header-nav.active {
     height: 100vh;
@@ -307,6 +308,7 @@ p:not(:first-child) {
 #showcase .slides {
   position: absolute;
   inset: 0;
+  z-index: 5;
 }
 
 #showcase .slide {
