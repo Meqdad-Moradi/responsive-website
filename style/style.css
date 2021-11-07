@@ -62,8 +62,8 @@ section {
 .main-title::after {
   content: "";
   height: 8px;
-  width: 110%;
-  background-color: #BFDBFE;
+  width: 105%;
+  background-color: #A7F3D0;
   position: absolute;
   left: 50%;
   bottom: 20px;
@@ -387,5 +387,57 @@ section {
 #showcase .slide.active {
   opacity: 1;
   pointer-events: all;
+}
+
+#projects .projects-container {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 3em;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  text-align: center;
+  margin-top: 3em;
+}
+
+#projects .projects-card {
+  border: 1px solid #E5E7EB;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#projects .projects-card:hover {
+  -webkit-box-shadow: 0 0 5px -2px #9CA3AF;
+          box-shadow: 0 0 5px -2px #9CA3AF;
+}
+
+#projects .project-img {
+  overflow: hidden;
+}
+
+#projects .project-img img {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+#projects .project-img:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+#projects .projcet-content {
+  padding: 2em;
 }
 /*# sourceMappingURL=style.css.map */
