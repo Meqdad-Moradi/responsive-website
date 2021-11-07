@@ -17,25 +17,98 @@ headerLinks.forEach((link) =>
   })
 );
 
-// ======== showcase slider
+// ======== showcase slider ==================
+
 const slides = Array.from(document.querySelectorAll(".slide"));
+const sliderCounter = document.querySelector("#slider-counter");
+const prev = document.querySelector("#prev");
+const next = document.querySelector("#next");
 const auto = true;
 const intervalTime = 5000;
 let interval;
 let counter = 0;
+
+function reset() {
+  slides.forEach((slide) => slide.classList.remove("active"));
+}
 
 function slider() {
   counter++;
   if (counter > slides.length - 1) {
     counter = 0;
   }
-  slides.forEach((slide) => slide.classList.remove("active"));
+  reset();
   slides[counter].classList.add("active");
+
+  sliderCounter.textContent = counter + 1;
 }
 
 // auto slide
 if (auto) {
-  interval = setInterval(() => {
-    slider();
-  }, intervalTime);
+  interval = setInterval(slider, intervalTime);
 }
+
+// next slide
+next.addEventListener("click", () => {
+  const active = document.querySelector(".slide.active");
+  const nextSlide = active.nextElementSibling;
+  const index = slides.findIndex((i) => i === nextSlide);
+
+  reset();
+  counter = index;
+  sliderCounter.textContent = counter + 1;
+  if (counter < 1) {
+    sliderCounter.textContent = 1;
+  }
+
+  if (nextSlide && nextSlide !== null) {
+    nextSlide.classList.add("active");
+  } else {
+    slides[0].classList.add("active");
+  }
+
+  if (auto) {
+    clearInterval(interval);
+    interval = setInterval(slider, intervalTime);
+  }
+});
+
+// prev slide
+prev.addEventListener("click", () => {
+  const active = document.querySelector(".slide.active");
+  const prevSlide = active.previousElementSibling;
+  const index = slides.findIndex((i) => i === prevSlide);
+
+  reset();
+  counter = index;
+  sliderCounter.textContent = index + 1;
+  if (index < 0) {
+    sliderCounter.textContent = 4;
+  }
+
+  if (prevSlide && prevSlide !== null) {
+    prevSlide.classList.add("active");
+  } else {
+    slides[slides.length - 1].classList.add("active");
+    // counter = index;
+  }
+
+  if (auto) {
+    clearInterval(interval);
+    interval = setInterval(slider, intervalTime);
+  }
+});
+
+// ============= sticky header ==================
+
+const header = document.querySelector("#header");
+
+function stickyHeader() {
+  const height = header.offsetHeight;
+  if (window.scrollY > 0) {
+    header.classList.add("sticky-header");
+    document.body.style.marginTop = height + "px";
+  }
+}
+
+window.addEventListener("scroll", stickyHeader);

@@ -10,6 +10,15 @@
   height: 70px;
   box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.5);
 
+  &.sticky-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: $gray-50;
+    z-index: 100000;
+
+  }
+
   .container {
     display: flex;
     justify-content: space-between;
@@ -168,8 +177,45 @@
         text-transform: capitalize;
         font-size: 2.265rem;
       }
-      .btn{
-          margin-top: 2.5em;
+      .btn {
+        margin-top: 2.5em;
+      }
+    }
+  }
+
+  //   controler
+  .controler {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(30px);
+    color: $gray-50;
+    padding: 0.5em 1em;
+    z-index: 50;
+
+    span {
+      font-size: 1.5rem;
+      line-height: normal;
+      cursor: pointer;
+      &:nth-child(2) {
+        padding: 0;
+        cursor: text;
+        font-family: "Zen Antique", serif;
+      }
+
+      &:first-child {
+        padding-right: 0.5em;
+        font-size: 1.25rem;
+      }
+      &:last-child {
+        padding-left: 0.5em;
+        font-size: 1.25rem;
+      }
+      #slider-counter {
+        padding: 0;
+        font-size: 1.5rem;
+        font-weight: 300;
       }
     }
   }
@@ -186,7 +232,7 @@
     inset: 0;
     opacity: 0;
     pointer-events: none;
-    transition: all .5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 
     img {
       height: 100%;
