@@ -285,5 +285,9 @@
 
   .projcet-content {
     padding: 2em;
+
+    .title {
+      text-transform: capitalize;
+    }
   }
 }

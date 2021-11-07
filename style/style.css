@@ -440,4 +440,8 @@ section {
 #projects .projcet-content {
   padding: 2em;
 }
+
+#projects .projcet-content .title {
+  text-transform: capitalize;
+}
 /*# sourceMappingURL=style.css.map */
