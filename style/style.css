@@ -23,7 +23,7 @@ body {
   line-height: 1.8;
   font-size: 1rem;
   font-family: "Poppins", sans-serif;
-  background-color: #F9FAFB;
+  background-color: #fdfdfd;
 }
 
 input,
@@ -52,7 +52,7 @@ section {
 
 .main-title {
   font-weight: 700;
-  font-size: 2.625rem;
+  font-size: 2.375rem;
   position: relative;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -62,11 +62,11 @@ section {
 .main-title::after {
   content: "";
   height: 8px;
-  width: 105%;
-  background-color: #A7F3D0;
+  width: 102%;
+  background-color: #a7f3d0;
   position: absolute;
   left: 50%;
-  bottom: 20px;
+  bottom: 18px;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   border-radius: 50px;
@@ -74,29 +74,29 @@ section {
 }
 
 .title {
-  color: #1F2937;
+  color: #1f2937;
   font-weight: 700;
   font-size: 1.5rem;
 }
 
 .subtitle {
-  color: #4B5563;
+  color: #4b5563;
   font-size: 1.125rem;
   font-weight: 600;
 }
 
 .body-text {
-  color: #6B7280;
+  color: #6b7280;
   font-size: 1rem;
 }
 
 .details {
-  color: #9CA3AF;
+  color: #9ca3af;
   font-size: 0.875rem;
 }
 
 .small {
-  color: #9CA3AF;
+  color: #9ca3af;
   font-size: 0.75rem;
 }
 
@@ -115,7 +115,7 @@ section {
 }
 
 .btn:hover {
-  background-color: #10B981;
+  background-color: #10b981;
 }
 
 .container {
@@ -133,7 +133,7 @@ section {
   position: fixed;
   width: 100%;
   top: 0;
-  background-color: #F9FAFB;
+  background-color: #fdfdfd;
   z-index: 100000;
 }
 
@@ -162,7 +162,7 @@ section {
 #header .logo h1 {
   font-size: 1.5rem;
   text-transform: uppercase;
-  color: #065F46;
+  color: #065f46;
 }
 
 #header .nav-list {
@@ -176,7 +176,7 @@ section {
 }
 
 #header .nav-list a {
-  color: #1F2937;
+  color: #1f2937;
   position: relative;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -212,7 +212,7 @@ section {
     height: 0;
     width: 100vw;
     overflow: hidden;
-    background-color: #1F2937;
+    background-color: #1f2937;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     z-index: 100;
@@ -242,7 +242,7 @@ section {
     margin-bottom: 1em !important;
   }
   #header .nav-list a {
-    color: #F9FAFB;
+    color: #f9fafb;
     font-size: 1.125rem;
     font-weight: 300;
   }
@@ -252,14 +252,14 @@ section {
     z-index: 1000;
   }
   #header .toggler span {
-    background-color: #1F2937;
+    background-color: #1f2937;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     -webkit-transform-origin: 20px;
             transform-origin: 20px;
   }
   #header .toggler.active span {
-    background-color: #F9FAFB;
+    background-color: #f9fafb;
   }
   #header .toggler.active span:first-child {
     -webkit-transform: rotate(-45deg);
@@ -311,7 +311,7 @@ section {
   position: relative;
   z-index: 10;
   text-align: center;
-  color: #F9FAFB;
+  color: #f9fafb;
 }
 
 #showcase .container .content h1 {
@@ -330,7 +330,7 @@ section {
   background-color: rgba(255, 255, 255, 0.2);
   -webkit-backdrop-filter: blur(30px);
           backdrop-filter: blur(30px);
-  color: #F9FAFB;
+  color: #f9fafb;
   padding: 0.5em 1em;
   z-index: 50;
 }
@@ -406,7 +406,7 @@ section {
 }
 
 #projects .projects-card {
-  border: 1px solid #E5E7EB;
+  border: 1px solid #e5e7eb;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   border-radius: 10px;
@@ -414,8 +414,8 @@ section {
 }
 
 #projects .projects-card:hover {
-  -webkit-box-shadow: 0 0 5px -2px #9CA3AF;
-          box-shadow: 0 0 5px -2px #9CA3AF;
+  -webkit-box-shadow: 0 0 5px -2px #9ca3af;
+          box-shadow: 0 0 5px -2px #9ca3af;
 }
 
 #projects .project-img {
@@ -443,5 +443,183 @@ section {
 
 #projects .projcet-content .title {
   text-transform: capitalize;
+}
+
+#about {
+  background-color: #f9fafb;
+}
+
+#about .main-title {
+  z-index: 1;
+}
+
+#about .about-content-body {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 3em;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin-top: 3em;
+}
+
+#about .content p.body-text {
+  text-align: justify;
+}
+
+#about .content .sign {
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+#contact .map-container {
+  position: relative;
+  margin-top: 3em;
+  overflow: hidden;
+}
+
+#contact .map-container .map {
+  width: 100%;
+  height: 70vh;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#contact .map-container:hover .map {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
+#contact .contact-content {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 3em;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2.5em;
+}
+
+#contact .contact-content .contact-info {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+#contact .contact-content .contact-info .title {
+  text-align: left;
+  margin-bottom: 1em;
+}
+
+#contact .contact-content .contact-info-list li:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+#contact .contact-content .contact-info-list li i {
+  color: #3b82f6;
+  padding-right: 0.5em;
+  font-size: 1.25rem;
+}
+
+#contact .contact-content .contact-form-container {
+  padding: 2em;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+}
+
+#contact .contact-content .contact-form-container .input-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#contact .contact-content .contact-form-container .input-container.error input,
+#contact .contact-content .contact-form-container .input-container.error #message {
+  border-color: #fc416a;
+}
+
+#contact .contact-content .contact-form-container .input-container.error small {
+  display: block;
+  color: #fc416a;
+}
+
+#contact .contact-content .contact-form-container .input-container.success input,
+#contact .contact-content .contact-form-container .input-container.success #message {
+  border-color: #e5e7eb;
+}
+
+#contact .contact-content .contact-form-container .input-container.success small {
+  display: none;
+}
+
+#contact .contact-content .contact-form-container .input-container:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+#contact .contact-content .contact-form-container .input-container label {
+  text-transform: capitalize;
+  display: inline-block;
+  margin-bottom: 0.2em;
+}
+
+#contact .contact-content .contact-form-container .input-container input,
+#contact .contact-content .contact-form-container .input-container textarea {
+  width: 100%;
+  resize: none;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  padding: 0.5em 0.8em;
+  border: 1px solid #e5e7eb;
+  border-radius: 5px;
+  outline: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#contact .contact-content .contact-form-container .input-container input:hover, #contact .contact-content .contact-form-container .input-container input:focus,
+#contact .contact-content .contact-form-container .input-container textarea:hover,
+#contact .contact-content .contact-form-container .input-container textarea:focus {
+  border-color: #a7f3d0;
+  -webkit-box-shadow: 0 0 5px -2px #10b981;
+          box-shadow: 0 0 5px -2px #10b981;
+}
+
+#contact .contact-content .contact-form-container .btn {
+  margin-top: 1em;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* media contact page */
+@media (max-width: 760px) {
+  #contact .contact-form-container {
+    padding: 1em !important;
+  }
+  #contact .contact-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
 }
 /*# sourceMappingURL=style.css.map */
