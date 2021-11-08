@@ -112,3 +112,56 @@ function stickyHeader() {
 }
 
 window.addEventListener("scroll", stickyHeader);
+
+// ================ contact form ================
+const contactForm = document.querySelector("#contact-form");
+const fname = document.querySelector("#name");
+const email = document.querySelector("#email");
+const message = document.querySelector("#message");
+
+contactForm.addEventListener("submit", submitForm);
+
+function submitForm(e) {
+  e.preventDefault();
+  const nameValue = fname.value.trim();
+  const emailValue = email.value.trim();
+  const messageValue = message.value.trim();
+
+  if (nameValue === "" || nameValue === null) {
+    error(fname, "Please insert your full name!");
+  } else {
+    success(fname);
+  }
+
+  if (emailValue === "" || emailValue === null) {
+    error(email, "Please insert your email!");
+  } else {
+    success(email);
+  }
+
+  if (messageValue === "" || messageValue === null) {
+    error(message, "Please insert your message!");
+  } else {
+    success(message);
+  }
+
+  fname.value = "";
+  email.value = "";
+  message.value = "";
+}
+
+function error(input, msg) {
+  const inputContainer = input.parentElement;
+  const small = inputContainer.querySelector("small");
+
+  inputContainer.className = "input-container error";
+  small.textContent = msg;
+}
+
+function success(input) {
+  const inputContainer = input.parentElement;
+  const small = inputContainer.querySelector("small");
+
+  inputContainer.className = "input-container success";
+  small.textContent = "";
+}
