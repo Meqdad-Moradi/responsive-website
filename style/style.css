@@ -484,11 +484,6 @@ section {
   transition: all 0.3s ease-in-out;
 }
 
-#contact .map-container:hover .map {
-  -webkit-transform: scale(1.03);
-          transform: scale(1.03);
-}
-
 #contact .contact-content {
   display: -ms-grid;
   display: grid;
