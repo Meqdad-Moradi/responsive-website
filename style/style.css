@@ -643,6 +643,7 @@ section {
 #footer .container {
   display: -ms-grid;
   display: grid;
+  grid-gap: 2em;
   -ms-grid-columns: (minmax(400px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
@@ -715,13 +716,14 @@ section {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1 / 2;
+  margin-top: 0;
 }
 
 #footer .body-text .far.fa-heart {
   color: #fc416a;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 1024px) {
   #footer {
     overflow: hidden;
   }
