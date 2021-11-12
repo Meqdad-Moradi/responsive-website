@@ -723,7 +723,7 @@ section {
 
 @media (max-width: 760px) {
   #footer {
-    overflow-x: hidden;
+    overflow: hidden;
   }
   #footer .footer-nav {
     -webkit-box-pack: start !important;
