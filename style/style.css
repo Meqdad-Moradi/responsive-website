@@ -24,6 +24,7 @@ body {
   font-size: 1rem;
   font-family: "Poppins", sans-serif;
   background-color: #fdfdfd;
+  overflow-x: hidden;
 }
 
 input,
@@ -721,6 +722,9 @@ section {
 }
 
 @media (max-width: 760px) {
+  #footer {
+    overflow-x: hidden;
+  }
   #footer .footer-nav {
     -webkit-box-pack: start !important;
         -ms-flex-pack: start !important;
