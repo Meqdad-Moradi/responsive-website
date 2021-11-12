@@ -129,18 +129,24 @@ function submitForm(e) {
 
   if (nameValue === "" || nameValue === null) {
     error(fname, "Please insert your full name!");
+    fname.focus();
+    return;
   } else {
     success(fname);
   }
 
   if (emailValue === "" || emailValue === null) {
     error(email, "Please insert your email!");
+    email.focus();
+    return;
   } else {
     success(email);
   }
 
   if (messageValue === "" || messageValue === null) {
     error(message, "Please insert your message!");
+    message.focus();
+    return;
   } else {
     success(message);
   }
